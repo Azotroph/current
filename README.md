@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 DynamicCoin official development tree
 
@@ -30,3 +31,7 @@ in this manner will have their corresponding issue labeled 'stagnant'.
 Issues with no commits will be given a similar warning, and closed after
 15 days from their last activity. Issues closed in this manner will be 
 labeled 'stale'.
+=======
+current
+=======
+>>>>>>> 77f3b12fe3e9cafb1cca29594d40913155cdbe8a
