@@ -29,7 +29,7 @@
       <string>A&amp;mount:</string>
      </property>
      <property name="alignment">
-      <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+      <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AligCRCenter</set>
      </property>
      <property name="buddy">
       <cstring>payAmount</cstring>
@@ -42,7 +42,7 @@
       <string>Pay &amp;To:</string>
      </property>
      <property name="alignment">
-      <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+      <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AligCRCenter</set>
      </property>
      <property name="buddy">
       <cstring>payTo</cstring>
@@ -75,7 +75,7 @@
       <string>&amp;Label:</string>
      </property>
      <property name="alignment">
-      <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+      <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AligCRCenter</set>
      </property>
      <property name="buddy">
       <cstring>addAsLabel</cstring>
@@ -90,7 +90,7 @@
      <item>
       <widget class="QValidatedLineEdit" name="payTo">
        <property name="toolTip">
-        <string>The address to send the payment to  (e.g. B8gZqgY4r2RoEdqYk3QsAqFckyf9pRHN6i)</string>
+        <string>The address to send the payment to  (e.g. 4Zo1ga6xuKuQ7JV7M9rGDoxdbYwV5zgQJ5)</string>
        </property>
        <property name="maxLength">
         <number>34</number>

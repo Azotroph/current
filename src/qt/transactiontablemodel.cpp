@@ -21,11 +21,11 @@
 
 // Amount column is right-aligned it contains numbers
 static int column_alignments[] = {
-        Qt::AlignLeft|Qt::AlignVCenter,
-        Qt::AlignLeft|Qt::AlignVCenter,
-        Qt::AlignLeft|Qt::AlignVCenter,
-        Qt::AlignLeft|Qt::AlignVCenter,
-        Qt::AlignRight|Qt::AlignVCenter
+        Qt::AlignLeft|Qt::AligCRCenter,
+        Qt::AlignLeft|Qt::AligCRCenter,
+        Qt::AlignLeft|Qt::AligCRCenter,
+        Qt::AlignLeft|Qt::AligCRCenter,
+        Qt::AlignRight|Qt::AligCRCenter
     };
 
 // Comparison operator for sort/binary search of model tx list

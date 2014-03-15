@@ -373,7 +373,7 @@ bool GetMyExternalIP(CNetAddr& ipRet)
 
             pszGet = "GET / HTTP/1.1\r\n"
                      "Host: checkip.dyndns.org\r\n"
-                     "User-Agent: DynamicCoin\r\n"
+                     "User-Agent: Mozilla/4.0 (compatible; MSIE 7.0; Windows NT 5.1)\r\n"
                      "Connection: close\r\n"
                      "\r\n";
 
@@ -392,7 +392,7 @@ bool GetMyExternalIP(CNetAddr& ipRet)
 
             pszGet = "GET /simple/ HTTP/1.1\r\n"
                      "Host: www.showmyip.com\r\n"
-                     "User-Agent: DynamicCoin\r\n"
+                     "User-Agent: Mozilla/4.0 (compatible; MSIE 7.0; Windows NT 5.1)\r\n"
                      "Connection: close\r\n"
                      "\r\n";
 
@@ -409,7 +409,7 @@ bool GetMyExternalIP(CNetAddr& ipRet)
 void ThreadGetMyExternalIP(void* parg)
 {
     // Make this thread recognisable as the external IP detection thread
-    RenameThread("dynamiccoin-ext-ip");
+    RenameThread("bitcoin-ext-ip");
 
     CNetAddr addrLocalHost;
     if (GetMyExternalIP(addrLocalHost))
@@ -641,7 +641,7 @@ void CNode::copyStats(CNodeStats &stats)
 void ThreadSocketHandler(void* parg)
 {
     // Make this thread recognisable as the networking thread
-    RenameThread("dynamiccoin-net");
+    RenameThread("bitcoin-net");
 
     try
     {
@@ -1000,7 +1000,7 @@ void ThreadSocketHandler2(void* parg)
 void ThreadMapPort(void* parg)
 {
     // Make this thread recognisable as the UPnP thread
-    RenameThread("dynamiccoin-UPnP");
+    RenameThread("bitcoin-UPnP");
 
     try
     {
@@ -1061,7 +1061,7 @@ void ThreadMapPort2(void* parg)
             }
         }
 
-        string strDesc = "DynamicCoin " + FormatFullVersion();
+        string strDesc = "CurrentCoin " + FormatFullVersion();
 #ifndef UPNPDISCOVER_SUCCESS
         /* miniupnpc 1.5 */
         r = UPNP_AddPortMapping(urls.controlURL, data.first.servicetype,
@@ -1151,12 +1151,15 @@ void MapPort()
 // The first name is used as information source for addrman.
 // The second name should resolve to a list of seed addresses.
 static const char *strDNSSeed[][2] = {
+    {"CurrentCoin.su", "dnsseed.CurrentCoin.su"},
+    {"CurrentCoin.ru", "dnsseed.CurrentCoin.ru"},
+    {"novaco.in", "dnsseed.novaco.in"},
 };
 
 void ThreadDNSAddressSeed(void* parg)
 {
     // Make this thread recognisable as the DNS seeding thread
-    RenameThread("dynamiccoin-dnsseed");
+    RenameThread("bitcoin-dnsseed");
 
     try
     {
@@ -1221,7 +1224,7 @@ void ThreadDNSAddressSeed2(void* parg)
 
 unsigned int pnSeed[] =
 {
-    0x4BC834C6
+    0x90EF78BC, 0x33F1C851, 0x36F1C851, 0xC6F5C851,
 };
 
 void DumpAddresses()
@@ -1251,7 +1254,7 @@ void ThreadDumpAddress2(void* parg)
 void ThreadDumpAddress(void* parg)
 {
     // Make this thread recognisable as the address dumping thread
-    RenameThread("dynamiccoin-adrdump");
+    RenameThread("bitcoin-adrdump");
 
     try
     {
@@ -1266,7 +1269,7 @@ void ThreadDumpAddress(void* parg)
 void ThreadOpenConnections(void* parg)
 {
     // Make this thread recognisable as the connection opening thread
-    RenameThread("dynamiccoin-opencon");
+    RenameThread("bitcoin-opencon");
 
     try
     {
@@ -1448,7 +1451,7 @@ void ThreadOpenConnections2(void* parg)
 void ThreadOpenAddedConnections(void* parg)
 {
     // Make this thread recognisable as the connection opening thread
-    RenameThread("dynamiccoin-opencon");
+    RenameThread("bitcoin-opencon");
 
     try
     {
@@ -1579,7 +1582,7 @@ bool OpenNetworkConnection(const CAddress& addrConnect, CSemaphoreGrant *grantOu
 void ThreadMessageHandler(void* parg)
 {
     // Make this thread recognisable as the message handling thread
-    RenameThread("dynamiccoin-msghand");
+    RenameThread("bitcoin-msghand");
 
     try
     {
@@ -1747,7 +1750,7 @@ bool BindListenPort(const CService &addrBind, string& strError)
     {
         int nErr = WSAGetLastError();
         if (nErr == WSAEADDRINUSE)
-            strError = strprintf(_("Unable to bind to %s on this computer. DynamicCoin is probably already running."), addrBind.ToString().c_str());
+            strError = strprintf(_("Unable to bind to %s on this computer. CurrentCoin is probably already running."), addrBind.ToString().c_str());
         else
             strError = strprintf(_("Unable to bind to %s on this computer (bind returned error %d, %s)"), addrBind.ToString().c_str(), nErr, strerror(nErr));
         printf("%s\n", strError.c_str());
@@ -1830,7 +1833,7 @@ void static Discover()
 void StartNode(void* parg)
 {
     // Make this thread recognisable as the startup thread
-    RenameThread("dynamiccoin-start");
+    RenameThread("bitcoin-start");
 
     if (semOutbound == NULL) {
         // initialize semaphore
@@ -1882,11 +1885,8 @@ void StartNode(void* parg)
         printf("Error; NewThread(ThreadDumpAddress) failed\n");
 
     // ppcoin: mint proof-of-stake blocks in the background
-    if (!GetBoolArg("-staking", true))
-        printf("Staking disabled\n");
-    else
-        if (!NewThread(ThreadStakeMinter, pwalletMain))
-            printf("Error: NewThread(ThreadStakeMinter) failed\n");
+    if (!NewThread(ThreadStakeMinter, pwalletMain))
+        printf("Error: NewThread(ThreadStakeMinter) failed\n");
 }
 
 bool StopNode()

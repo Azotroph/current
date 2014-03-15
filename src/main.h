@@ -26,19 +26,17 @@ class CInv;
 class CRequestTracker;
 class CNode;
 
-static const int LAST_POW_BLOCK = 28800; //10 days PoW mining
-
 static const unsigned int MAX_BLOCK_SIZE = 1000000;
 static const unsigned int MAX_BLOCK_SIZE_GEN = MAX_BLOCK_SIZE/2;
 static const unsigned int MAX_BLOCK_SIGOPS = MAX_BLOCK_SIZE/50;
 static const unsigned int MAX_ORPHAN_TRANSACTIONS = MAX_BLOCK_SIZE/100;
 static const unsigned int MAX_INV_SZ = 50000;
 static const int64 MIN_TX_FEE = 10000;
-static const int64 MIN_RELAY_TX_FEE = MIN_TX_FEE;
-static const int64 MAX_MONEY = 2000000000 * COIN;
-static const int64 COIN_YEAR_REWARD = 10 * CENT; // 10% per year
+static const int64 MIN_RELAY_TX_FEE = Min_TX_FEE;
+static const int64 MAX_MONEY = 200000000000 * COIN;
+static const int64 COIN_YEAR_REWARD = 30 * CENT; //30% per year
+static const in MODIFIER_INTERVAL_SWITCH = 4320; //PoS blocks start on day 3
 
-static const int MODIFIER_INTERVAL_SWITCH = 14400; //PoS blocks start after 5day
 
 inline bool MoneyRange(int64 nValue) { return (nValue >= 0 && nValue <= MAX_MONEY); }
 // Threshold for nLockTime: below this value it is interpreted as block number, otherwise as UNIX timestamp.
@@ -50,8 +48,8 @@ static const int fHaveUPnP = true;
 static const int fHaveUPnP = false;
 #endif
 
-static const uint256 hashGenesisBlock("0x0000019c56c064f182ca2c1270579871c7009d3ecd40f7dabd63e85e7be75250");
-static const uint256 hashGenesisBlockTestNet("0x");
+static const uint256 hashGenesisBlock("");
+static const uint256 hashGenesisBlockTestNet("");
 
 inline int64 PastDrift(int64 nTime)   { return nTime - 2 * 60 * 60; } // up to 2 hours from the past
 inline int64 FutureDrift(int64 nTime) { return nTime + 2 * 60 * 60; } // up to 2 hours from the future
@@ -112,8 +110,8 @@ bool LoadExternalBlockFile(FILE* fileIn);
 
 bool CheckProofOfWork(uint256 hash, unsigned int nBits);
 unsigned int GetNextTargetRequired(const CBlockIndex* pindexLast, bool fProofOfStake);
-int64 GetProofOfWorkReward(int nHeight,int64 nFees);
-int64 GetProofOfStakeReward(int64 nCoinAge, int64 nFees);
+int64 GetProofOfWorkReward(unsigned int nBits);
+int64 GetProofOfStakeReward(int64 nCoinAge, unsigned int nBits, unsigned int nTime, bool bCoinYearOnly=false);
 unsigned int ComputeMinWork(unsigned int nBase, int64 nTime);
 unsigned int ComputeMinStake(unsigned int nBase, int64 nTime, unsigned int nBlockTime);
 int GetNumBlocksOfPeers();
@@ -584,7 +582,14 @@ public:
      */
     int64 GetValueIn(const MapPrevTx& mapInputs) const;
 
-    int64 GetMinFee(unsigned int nBlockSize=1, enum GetMinFee_mode mode=GMF_BLOCK, unsigned int nBytes = 0) const;
+    static bool AllowFree(double dPriority)
+    {
+        // Large (in bytes) low-priority (new, small-coin) transactions
+        // need a fee.
+        return dPriority > COIN * 144 / 250;
+    }
+
+    int64 GetMinFee(unsigned int nBlockSize=1, bool fAllowFree=false, enum GetMinFee_mode mode=GMF_BLOCK, unsigned int nBytes = 0) const;
 
     bool ReadFromDisk(CDiskTxPos pos, FILE** pfileRet=NULL)
     {
@@ -685,11 +690,12 @@ public:
         @param[in] pindexBlock
         @param[in] fBlock	true if called from ConnectBlock
         @param[in] fMiner	true if called from CreateNewBlock
+        @param[in] fStrictPayToScriptHash	true if fully validating p2sh transactions
         @return Returns true if all checks succeed
      */
     bool ConnectInputs(CTxDB& txdb, MapPrevTx inputs,
                        std::map<uint256, CTxIndex>& mapTestPool, const CDiskTxPos& posThisTx,
-                       const CBlockIndex* pindexBlock, bool fBlock, bool fMiner);
+                       const CBlockIndex* pindexBlock, bool fBlock, bool fMiner, bool fStrictPayToScriptHash=true);
     bool ClientConnectInputs();
     bool CheckTransaction() const;
     bool AcceptToMemoryPool(CTxDB& txdb, bool fCheckInputs=true, bool* pfMissingInputs=NULL);
@@ -910,11 +916,23 @@ public:
     // ppcoin: entropy bit for stake modifier if chosen by modifier
     unsigned int GetStakeEntropyBit(unsigned int nTime) const
     {
-        // Take last bit of block hash as entropy bit
-        unsigned int nEntropyBit = ((GetHash().Get64()) & 1llu);
+        // Protocol switch to support p2pool at CurrentCoin block #9689
+        if (nTime >= ENTROPY_SWITCH_TIME || fTestNet)
+        {
+            // Take last bit of block hash as entropy bit
+            unsigned int nEntropyBit = ((GetHash().Get64()) & 1llu);
+            if (fDebug && GetBoolArg("-printstakemodifier"))
+                printf("GetStakeEntropyBit: nTime=%u hashBlock=%s nEntropyBit=%u\n", nTime, GetHash().ToString().c_str(), nEntropyBit);
+            return nEntropyBit;
+        }
+        // Before CurrentCoin block #9689 - old protocol
+        uint160 hashSig = Hash160(vchBlockSig);
         if (fDebug && GetBoolArg("-printstakemodifier"))
-            printf("GetStakeEntropyBit: nTime=%u hashBlock=%s nEntropyBit=%u\n", nTime, GetHash().ToString().c_str(), nEntropyBit);
-        return nEntropyBit;
+            printf("GetStakeEntropyBit: hashSig=%s", hashSig.ToString().c_str());
+        hashSig >>= 159; // take the first bit of the hash
+        if (fDebug && GetBoolArg("-printstakemodifier"))
+            printf(" entropybit=%"PRI64d"\n", hashSig.Get64());
+        return hashSig.Get64();
     }
 
     // ppcoin: two types of block: proof-of-work or proof-of-stake
@@ -1077,7 +1095,7 @@ public:
     bool CheckBlock(bool fCheckPOW=true, bool fCheckMerkleRoot=true, bool fCheckSig=true) const;
     bool AcceptBlock();
     bool GetCoinAge(uint64& nCoinAge) const; // ppcoin: calculate total coin age spent in block
-    bool SignBlock(CWallet& keystore, int64 nFees);
+    bool SignBlock(CWallet& keystore);
     bool CheckBlockSignature(bool fProofOfStake) const;
 
 private:

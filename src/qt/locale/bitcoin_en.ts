@@ -1,27 +1,28 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.1" language="en">
+<TS version="2.0" language="en">
+<defaultcodec>UTF-8</defaultcodec>
 <context>
     <name>AboutDialog</name>
     <message>
         <location filename="../forms/aboutdialog.ui" line="+14"/>
-        <source>About DynamicCoin</source>
-        <translation>About DynamicCoin</translation>
+        <source>About CurrentCoin</source>
+        <translation>About CurrentCoin</translation>
     </message>
     <message>
         <location line="+39"/>
-        <source>&lt;b&gt;DynamicCoin&lt;/b&gt; version</source>
-        <translation>&lt;b&gt;DynamicCoin&lt;/b&gt; version</translation>
+        <source>&lt;b&gt;CurrentCoin&lt;/b&gt; version</source>
+        <translation>&lt;b&gt;CurrentCoin&lt;/b&gt; version</translation>
     </message>
     <message>
         <location line="+41"/>
         <source>Copyright © 2009-2014 The Bitcoin developers
-Copyright © 2012-2014 The NovaCoin developers</source>
+Copyright © 2012-2014 The CurrentCoin developers</source>
         <translation>Copyright © 2009-2014 The Bitcoin developers
-Copyright © 2012-2014 The NovaCoin developers</translation>
+Copyright © 2012-2014 The CurrentCoin developers</translation>
     </message>
     <message>
-        <location line="+14"/>
+        <location line="+13"/>
         <source>
 This is experimental software.
 
@@ -65,8 +66,8 @@ This product includes software developed by the OpenSSL Project for use in the O
     </message>
     <message>
         <location line="-46"/>
-        <source>These are your DynamicCoin addresses for receiving payments. You may want to give a different one to each sender so you can keep track of who is paying you.</source>
-        <translation>These are your DynamicCoin addresses for receiving payments. You may want to give a different one to each sender so you can keep track of who is paying you.</translation>
+        <source>These are your CurrentCoin addresses for receiving payments. You may want to give a different one to each sender so you can keep track of who is paying you.</source>
+        <translation>These are your CurrentCoin addresses for receiving payments. You may want to give a different one to each sender so you can keep track of who is paying you.</translation>
     </message>
     <message>
         <location line="+60"/>
@@ -80,23 +81,23 @@ This product includes software developed by the OpenSSL Project for use in the O
     </message>
     <message>
         <location line="+11"/>
-        <source>Sign a message to prove you own a DynamicCoin address</source>
-        <translation>Sign a message to prove you own a DynamicCoin address</translation>
+        <source>Sign a message to prove you own a CurrentCoin address</source>
+        <translation>Sign a message to prove you own a CurrentCoin address</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Sign &amp;Message</source>
-        <translation></translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+25"/>
         <source>Delete the currently selected address from the list</source>
-        <translation></translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="-14"/>
-        <source>Verify a message to ensure it was signed with a specified DynamicCoin address</source>
-        <translation>Verify a message to ensure it was signed with a specified DynamicCoin address</translation>
+        <source>Verify a message to ensure it was signed with a specified CurrentCoin address</source>
+        <translation>Verify a message to ensure it was signed with a specified CurrentCoin address</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -142,7 +143,7 @@ This product includes software developed by the OpenSSL Project for use in the O
 <context>
     <name>AddressTableModel</name>
     <message>
-        <location filename="../addresstablemodel.cpp" line="+144"/>
+        <location filename="../addresstablemodel.cpp" line="+142"/>
         <source>Label</source>
         <translation>Label</translation>
     </message>
@@ -237,7 +238,7 @@ This product includes software developed by the OpenSSL Project for use in the O
     <message>
         <location line="+15"/>
         <source>IMPORTANT: Any previous backups you have made of your wallet file should be replaced with the newly generated, encrypted wallet file. For security reasons, previous backups of the unencrypted wallet file will become useless as soon as you start using the new, encrypted wallet.</source>
-        <translation></translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+100"/>
@@ -253,8 +254,8 @@ This product includes software developed by the OpenSSL Project for use in the O
     </message>
     <message>
         <location line="-56"/>
-        <source>DynamicCoin will close now to finish the encryption process. Remember that encrypting your wallet cannot fully protect your coins from being stolen by malware infecting your computer.</source>
-        <translation>DynamicCoin will close now to finish the encryption process. Remember that encrypting your wallet cannot fully protect your coins from being stolen by malware infecting your computer.</translation>
+        <source>CurrentCoin will close now to finish the encryption process. Remember that encrypting your wallet cannot fully protect your coins from being stolen by malware infecting your computer.</source>
+        <translation>CurrentCoin will close now to finish the encryption process. Remember that encrypting your wallet cannot fully protect your coins from being stolen by malware infecting your computer.</translation>
     </message>
     <message>
         <location line="+13"/>
@@ -301,7 +302,7 @@ This product includes software developed by the OpenSSL Project for use in the O
 <context>
     <name>BitcoinGUI</name>
     <message>
-        <location filename="../bitcoingui.cpp" line="+275"/>
+        <location filename="../bitcoingui.cpp" line="+257"/>
         <source>Sign &amp;message...</source>
         <translation>Sign &amp;message...</translation>
     </message>
@@ -367,8 +368,8 @@ This product includes software developed by the OpenSSL Project for use in the O
     </message>
     <message>
         <location line="+4"/>
-        <source>Show information about DynamicCoin</source>
-        <translation>Show information about DynamicCoin</translation>
+        <source>Show information about CurrentCoin</source>
+        <translation>Show information about CurrentCoin</translation>
     </message>
     <message>
         <location line="+2"/>
@@ -420,13 +421,13 @@ This product includes software developed by the OpenSSL Project for use in the O
     </message>
     <message>
         <location line="-58"/>
-        <source>Send coins to a DynamicCoin address</source>
-        <translation>Send coins to a DynamicCoin address</translation>
+        <source>Send coins to a CurrentCoin address</source>
+        <translation>Send coins to a CurrentCoin address</translation>
     </message>
     <message>
         <location line="+45"/>
-        <source>Modify configuration options for DynamicCoin</source>
-        <translation>Modify configuration options for DynamicCoin</translation>
+        <source>Modify configuration options for CurrentCoin</source>
+        <translation>Modify configuration options for CurrentCoin</translation>
     </message>
     <message>
         <location line="+14"/>
@@ -464,9 +465,9 @@ This product includes software developed by the OpenSSL Project for use in the O
         <translation>&amp;Verify message...</translation>
     </message>
     <message>
-        <location line="-197"/>
-        <source>DynamicCoin</source>
-        <translation>DynamicCoin</translation>
+        <location line="-186"/>
+        <source>CurrentCoin</source>
+        <translation>CurrentCoin</translation>
     </message>
     <message>
         <location line="+0"/>
@@ -474,9 +475,9 @@ This product includes software developed by the OpenSSL Project for use in the O
         <translation>Wallet</translation>
     </message>
     <message>
-        <location line="+179"/>
-        <source>&amp;About DynamicCoin</source>
-        <translation>&amp;About DynamicCoin</translation>
+        <location line="+168"/>
+        <source>&amp;About CurrentCoin</source>
+        <translation>&amp;About CurrentCoin</translation>
     </message>
     <message>
         <location line="+9"/>
@@ -517,15 +518,15 @@ This product includes software developed by the OpenSSL Project for use in the O
     <message>
         <location line="+0"/>
         <location line="+60"/>
-        <source>DynamicCoin client</source>
-        <translation>DynamicCoin client</translation>
+        <source>CurrentCoin client</source>
+        <translation>CurrentCoin client</translation>
     </message>
     <message numerus="yes">
         <location line="+69"/>
-        <source>%n active connection(s) to DynamicCoin network</source>
+        <source>%n active connection(s) to CurrentCoin network</source>
         <translation>
-            <numerusform>%n active connection to DynamicCoin network</numerusform>
-            <numerusform>%n active connections to DynamicCoin network</numerusform>
+            <numerusform>%n active connection to CurrentCoin network</numerusform>
+            <numerusform>%n active connections to CurrentCoin network</numerusform>
         </translation>
     </message>
     <message>
@@ -533,38 +534,8 @@ This product includes software developed by the OpenSSL Project for use in the O
         <source>Downloaded %1 blocks of transaction history.</source>
         <translation>Downloaded %1 blocks of transaction history.</translation>
     </message>
-    <message>
-        <location line="+396"/>
-        <source>Staking.&lt;br&gt;Your weight is %1&lt;br&gt;Network weight is %2&lt;br&gt;Expected time to earn reward is %3</source>
-        <translation></translation>
-    </message>
-    <message>
-        <location line="+6"/>
-        <source>Not staking because wallet is locked</source>
-        <translation></translation>
-    </message>
-    <message>
-        <location line="+2"/>
-        <source>Not staking because wallet is offline</source>
-        <translation></translation>
-    </message>
-    <message>
-        <location line="+2"/>
-        <source>Not staking because wallet is syncing</source>
-        <translation></translation>
-    </message>
-    <message>
-        <location line="+2"/>
-        <source>Not staking because waiting for hardfork</source>
-        <translation></translation>
-    </message>
-    <message>
-        <location line="+2"/>
-        <source>Not staking because you don&apos;t have mature coins</source>
-        <translation></translation>
-    </message>
     <message numerus="yes">
-        <location line="-388"/>
+        <location line="+22"/>
         <source>%n second(s) ago</source>
         <translation>
             <numerusform>%n second ago</numerusform>
@@ -613,7 +584,7 @@ This product includes software developed by the OpenSSL Project for use in the O
     <message>
         <location line="+59"/>
         <source>This transaction is over the size limit.  You can still send it for a fee of %1, which goes to the nodes that process your transaction and helps to support the network.  Do you want to pay the fee?</source>
-        <translation></translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+5"/>
@@ -652,8 +623,8 @@ Address: %4
     <message>
         <location line="-15"/>
         <location line="+15"/>
-        <source>URI can not be parsed! This can be caused by an invalid DynamicCoin address or malformed URI parameters.</source>
-        <translation>URI can not be parsed! This can be caused by an invalid DynamicCoin address or malformed URI parameters.</translation>
+        <source>URI can not be parsed! This can be caused by an invalid CurrentCoin address or malformed URI parameters.</source>
+        <translation>URI can not be parsed! This can be caused by an invalid CurrentCoin address or malformed URI parameters.</translation>
     </message>
     <message>
         <location line="+16"/>
@@ -685,42 +656,10 @@ Address: %4
         <source>There was an error trying to save the wallet data to the new location.</source>
         <translation>There was an error trying to save the wallet data to the new location.</translation>
     </message>
-    <message numerus="yes">
-        <location line="+65"/>
-        <source>%n second(s)</source>
-        <translation>
-            <numerusform>%n second</numerusform>
-            <numerusform>%n seconds</numerusform>
-        </translation>
-    </message>
-    <message numerus="yes">
-        <location line="+4"/>
-        <source>%n minute(s)</source>
-        <translation>
-            <numerusform>%n minute</numerusform>
-            <numerusform>%n minutes</numerusform>
-        </translation>
-    </message>
-    <message numerus="yes">
-        <location line="+4"/>
-        <source>%n hour(s)</source>
-        <translation>
-            <numerusform>%n hour</numerusform>
-            <numerusform>%n hours</numerusform>
-        </translation>
-    </message>
-    <message numerus="yes">
-        <location line="+4"/>
-        <source>%n day(s)</source>
-        <translation>
-            <numerusform>%n day</numerusform>
-            <numerusform>%n days</numerusform>
-        </translation>
-    </message>
     <message>
         <location filename="../bitcoin.cpp" line="+109"/>
-        <source>A fatal error occurred. DynamicCoin can no longer continue safely and will quit.</source>
-        <translation>A fatal error occurred. DynamicCoin can no longer continue safely and will quit.</translation>
+        <source>A fatal error occurred. CurrentCoin can no longer continue safely and will quit.</source>
+        <translation>A fatal error occurred. CurrentCoin can no longer continue safely and will quit.</translation>
     </message>
 </context>
 <context>
@@ -764,8 +703,8 @@ Address: %4
         <location line="+80"/>
         <location line="+86"/>
         <location line="+38"/>
-        <source>0.00 DC</source>
-        <translation type="unfinished">123.456 DC {0.00 ?}</translation>
+        <source>0.00 CRC</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="-191"/>
@@ -907,37 +846,37 @@ Address: %4
     <message>
         <location line="+317"/>
         <source>highest</source>
-        <translation></translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+1"/>
         <source>high</source>
-        <translation></translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+1"/>
         <source>medium-high</source>
-        <translation></translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+1"/>
         <source>medium</source>
-        <translation></translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+4"/>
         <source>low-medium</source>
-        <translation></translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+1"/>
         <source>low</source>
-        <translation></translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+1"/>
         <source>lowest</source>
-        <translation></translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+155"/>
@@ -1048,17 +987,17 @@ This label turns red, if the priority is smaller than &quot;medium&quot;.
         <translation>Edit sending address</translation>
     </message>
     <message>
-        <location line="+76"/>
+        <location line="+60"/>
         <source>The entered address &quot;%1&quot; is already in the address book.</source>
         <translation>The entered address &quot;%1&quot; is already in the address book.</translation>
     </message>
     <message>
-        <location line="-5"/>
-        <source>The entered address &quot;%1&quot; is not a valid DynamicCoin address.</source>
-        <translation>The entered address &quot;%1&quot; is not a valid DynamicCoin address.</translation>
+        <location line="+5"/>
+        <source>The entered address &quot;%1&quot; is not a valid CurrentCoin address.</source>
+        <translation>The entered address &quot;%1&quot; is not a valid CurrentCoin address.</translation>
     </message>
     <message>
-        <location line="+10"/>
+        <location line="+5"/>
         <source>Could not unlock wallet.</source>
         <translation>Could not unlock wallet.</translation>
     </message>
@@ -1073,8 +1012,8 @@ This label turns red, if the priority is smaller than &quot;medium&quot;.
     <message>
         <location filename="../guiutil.cpp" line="+420"/>
         <location line="+12"/>
-        <source>DynamicCoin-Qt</source>
-        <translation>DynamicCoin-Qt</translation>
+        <source>CurrentCoin-Qt</source>
+        <translation>CurrentCoin-Qt</translation>
     </message>
     <message>
         <location line="-12"/>
@@ -1136,13 +1075,13 @@ This label turns red, if the priority is smaller than &quot;medium&quot;.
     </message>
     <message>
         <location line="+31"/>
-        <source>Automatically start DynamicCoin after logging in to the system.</source>
-        <translation>Automatically start DynamicCoin after logging in to the system.</translation>
+        <source>Automatically start CurrentCoin after logging in to the system.</source>
+        <translation>Automatically start CurrentCoin after logging in to the system.</translation>
     </message>
     <message>
         <location line="+3"/>
-        <source>&amp;Start DynamicCoin on system login</source>
-        <translation>&amp;Start DynamicCoin on system login</translation>
+        <source>&amp;Start CurrentCoin on system login</source>
+        <translation>&amp;Start CurrentCoin on system login</translation>
     </message>
     <message>
         <location line="+7"/>
@@ -1161,8 +1100,8 @@ This label turns red, if the priority is smaller than &quot;medium&quot;.
     </message>
     <message>
         <location line="+6"/>
-        <source>Automatically open the DynamicCoin client port on the router. This only works when your router supports UPnP and it is enabled.</source>
-        <translation>Automatically open the DynamicCoin client port on the router. This only works when your router supports UPnP and it is enabled.</translation>
+        <source>Automatically open the CurrentCoin client port on the router. This only works when your router supports UPnP and it is enabled.</source>
+        <translation>Automatically open the CurrentCoin client port on the router. This only works when your router supports UPnP and it is enabled.</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -1171,8 +1110,8 @@ This label turns red, if the priority is smaller than &quot;medium&quot;.
     </message>
     <message>
         <location line="+7"/>
-        <source>Connect to the DynamicCoin network through a SOCKS proxy (e.g. when connecting through Tor).</source>
-        <translation>Connect to the DynamicCoin network through a SOCKS proxy (e.g. when connecting through Tor).</translation>
+        <source>Connect to the CurrentCoin network through a SOCKS proxy (e.g. when connecting through Tor).</source>
+        <translation>Connect to the CurrentCoin network through a SOCKS proxy (e.g. when connecting through Tor).</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -1246,8 +1185,8 @@ This label turns red, if the priority is smaller than &quot;medium&quot;.
     </message>
     <message>
         <location line="+13"/>
-        <source>The user interface language can be set here. This setting will take effect after restarting DynamicCoin.</source>
-        <translation>The user interface language can be set here. This setting will take effect after restarting DynamicCoin.</translation>
+        <source>The user interface language can be set here. This setting will take effect after restarting CurrentCoin.</source>
+        <translation>The user interface language can be set here. This setting will take effect after restarting CurrentCoin.</translation>
     </message>
     <message>
         <location line="+11"/>
@@ -1261,8 +1200,8 @@ This label turns red, if the priority is smaller than &quot;medium&quot;.
     </message>
     <message>
         <location line="+9"/>
-        <source>Whether to show DynamicCoin addresses in the transaction list or not.</source>
-        <translation>Whether to show DynamicCoin addresses in the transaction list or not.</translation>
+        <source>Whether to show CurrentCoin addresses in the transaction list or not.</source>
+        <translation>Whether to show CurrentCoin addresses in the transaction list or not.</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -1272,12 +1211,12 @@ This label turns red, if the priority is smaller than &quot;medium&quot;.
     <message>
         <location line="+7"/>
         <source>Whether to show coin control features or not.</source>
-        <translation></translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Display coin &amp;control features (experts only!)</source>
-        <translation></translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+71"/>
@@ -1308,8 +1247,8 @@ This label turns red, if the priority is smaller than &quot;medium&quot;.
     <message>
         <location line="-9"/>
         <location line="+9"/>
-        <source>This setting will take effect after restarting DynamicCoin.</source>
-        <translation>This setting will take effect after restarting DynamicCoin.</translation>
+        <source>This setting will take effect after restarting CurrentCoin.</source>
+        <translation>This setting will take effect after restarting CurrentCoin.</translation>
     </message>
     <message>
         <location line="+29"/>
@@ -1327,8 +1266,8 @@ This label turns red, if the priority is smaller than &quot;medium&quot;.
     <message>
         <location line="+33"/>
         <location line="+212"/>
-        <source>The displayed information may be out of date. Your wallet automatically synchronizes with the DynamicCoin network after a connection is established, but this process has not completed yet.</source>
-        <translation>The displayed information may be out of date. Your wallet automatically synchronizes with the DynamicCoin network after a connection is established, but this process has not completed yet.</translation>
+        <source>The displayed information may be out of date. Your wallet automatically synchronizes with the CurrentCoin network after a connection is established, but this process has not completed yet.</source>
+        <translation>The displayed information may be out of date. Your wallet automatically synchronizes with the CurrentCoin network after a connection is established, but this process has not completed yet.</translation>
     </message>
     <message>
         <location line="-170"/>
@@ -1395,37 +1334,6 @@ This label turns red, if the priority is smaller than &quot;medium&quot;.
         <location line="+1"/>
         <source>out of sync</source>
         <translation>out of sync</translation>
-    </message>
-</context>
-<context>
-    <name>QObject</name>
-    <message numerus="yes">
-        <source>%n second(s)</source>
-        <translation type="vanished">
-            <numerusform>%n second</numerusform>
-            <numerusform>%n seconds</numerusform>
-        </translation>
-    </message>
-    <message numerus="yes">
-        <source>%n minute(s)</source>
-        <translation type="vanished">
-            <numerusform>%n minute</numerusform>
-            <numerusform>%n minutes</numerusform>
-        </translation>
-    </message>
-    <message numerus="yes">
-        <source>%n hour(s)</source>
-        <translation type="vanished">
-            <numerusform>%n hour</numerusform>
-            <numerusform>%n hours</numerusform>
-        </translation>
-    </message>
-    <message numerus="yes">
-        <source>%n day(s)</source>
-        <translation type="vanished">
-            <numerusform>%n day</numerusform>
-            <numerusform>%n days</numerusform>
-        </translation>
     </message>
 </context>
 <context>
@@ -1574,8 +1482,8 @@ This label turns red, if the priority is smaller than &quot;medium&quot;.
     </message>
     <message>
         <location line="+7"/>
-        <source>Show the DynamicCoin-Qt help message to get a list with possible DynamicCoin command-line options.</source>
-        <translation>Show the DynamicCoin-Qt help message to get a list with possible DynamicCoin command-line options.</translation>
+        <source>Show the CurrentCoin-Qt help message to get a list with possible CurrentCoin command-line options.</source>
+        <translation>Show the CurrentCoin-Qt help message to get a list with possible CurrentCoin command-line options.</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -1594,13 +1502,13 @@ This label turns red, if the priority is smaller than &quot;medium&quot;.
     </message>
     <message>
         <location line="-104"/>
-        <source>DynamicCoin - Debug window</source>
-        <translation>DynamicCoin - Debug window</translation>
+        <source>CurrentCoin - Debug window</source>
+        <translation>CurrentCoin - Debug window</translation>
     </message>
     <message>
         <location line="+25"/>
-        <source>DynamicCoin Core</source>
-        <translation>DynamicCoin Core</translation>
+        <source>CurrentCoin Core</source>
+        <translation>CurrentCoin Core</translation>
     </message>
     <message>
         <location line="+279"/>
@@ -1609,8 +1517,8 @@ This label turns red, if the priority is smaller than &quot;medium&quot;.
     </message>
     <message>
         <location line="+7"/>
-        <source>Open the DynamicCoin debug log file from the current data directory. This can take a few seconds for large log files.</source>
-        <translation>Open the DynamicCoin debug log file from the current data directory. This can take a few seconds for large log files.</translation>
+        <source>Open the CurrentCoin debug log file from the current data directory. This can take a few seconds for large log files.</source>
+        <translation>Open the CurrentCoin debug log file from the current data directory. This can take a few seconds for large log files.</translation>
     </message>
     <message>
         <location line="+102"/>
@@ -1619,8 +1527,8 @@ This label turns red, if the priority is smaller than &quot;medium&quot;.
     </message>
     <message>
         <location filename="../rpcconsole.cpp" line="-33"/>
-        <source>Welcome to the DynamicCoin RPC console.</source>
-        <translation>Welcome to the DynamicCoin RPC console.</translation>
+        <source>Welcome to the CurrentCoin RPC console.</source>
+        <translation>Welcome to the CurrentCoin RPC console.</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -1693,8 +1601,8 @@ This label turns red, if the priority is smaller than &quot;medium&quot;.
         <location line="+86"/>
         <location line="+86"/>
         <location line="+32"/>
-        <source>0.00 DC</source>
-        <translation type="unfinished">123.456 DC {0.00 ?}</translation>
+        <source>0.00 BTC</source>
+        <translation type="unfinished">123.456 BTC {0.00 ?}</translation>
     </message>
     <message>
         <location line="-191"/>
@@ -1763,8 +1671,8 @@ This label turns red, if the priority is smaller than &quot;medium&quot;.
     </message>
     <message>
         <location line="+10"/>
-        <source>123.456 DC</source>
-        <translation>123.456 DC</translation>
+        <source>123.456 BTC</source>
+        <translation>123.456 BTC</translation>
     </message>
     <message>
         <location line="+31"/>
@@ -1778,48 +1686,48 @@ This label turns red, if the priority is smaller than &quot;medium&quot;.
     </message>
     <message>
         <location filename="../sendcoinsdialog.cpp" line="-173"/>
-        <source>Enter a DynamicCoin address (e.g. B8gZqgY4r2RoEdqYk3QsAqFckyf9pRHN6i)</source>
-        <translation>Enter a DynamicCoin address (e.g. B8gZqgY4r2RoEdqYk3QsAqFckyf9pRHN6i)</translation>
+        <source>Enter a CurrentCoin address (e.g. 4Zo1ga6xuKuQ7JV7M9rGDoxdbYwV5zgQJ5)</source>
+        <translation type="unfinished">Enter a CurrentCoin address (e.g. 4Zo1ga6xuKuQ7JV7M9rGDoxdbYwV5zgQJ5)</translation>
     </message>
     <message>
         <location line="+15"/>
         <source>Copy quantity</source>
-        <translation></translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Copy amount</source>
-        <translation>Copy amount</translation>
+        <translation type="unfinished">Copy amount</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Copy fee</source>
-        <translation></translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Copy after fee</source>
-        <translation></translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Copy bytes</source>
-        <translation></translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Copy priority</source>
-        <translation></translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Copy low output</source>
-        <translation></translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Copy change</source>
-        <translation></translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+86"/>
@@ -1878,8 +1786,8 @@ This label turns red, if the priority is smaller than &quot;medium&quot;.
     </message>
     <message>
         <location line="+251"/>
-        <source>WARNING: Invalid DynamicCoin address</source>
-        <translation></translation>
+        <source>WARNING: Invalid Bitcoin address</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+13"/>
@@ -1889,7 +1797,7 @@ This label turns red, if the priority is smaller than &quot;medium&quot;.
     <message>
         <location line="+4"/>
         <source>WARNING: unknown change address</source>
-        <translation></translation>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
@@ -1922,8 +1830,8 @@ This label turns red, if the priority is smaller than &quot;medium&quot;.
     </message>
     <message>
         <location line="+18"/>
-        <source>The address to send the payment to  (e.g. B8gZqgY4r2RoEdqYk3QsAqFckyf9pRHN6i)</source>
-        <translation></translation>
+        <source>The address to send the payment to  (e.g. 4Zo1ga6xuKuQ7JV7M9rGDoxdbYwV5zgQJ5)</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+10"/>
@@ -1952,8 +1860,8 @@ This label turns red, if the priority is smaller than &quot;medium&quot;.
     </message>
     <message>
         <location filename="../sendcoinsentry.cpp" line="+1"/>
-        <source>Enter a DynamicCoin address (e.g. B8gZqgY4r2RoEdqYk3QsAqFckyf9pRHN6i)</source>
-        <translation>Enter a DynamicCoin address (e.g. B8gZqgY4r2RoEdqYk3QsAqFckyf9pRHN6i)</translation>
+        <source>Enter a CurrentCoin address (e.g. 4Zo1ga6xuKuQ7JV7M9rGDoxdbYwV5zgQJ5)</source>
+        <translation>Enter a CurrentCoin address (e.g. 4Zo1ga6xuKuQ7JV7M9rGDoxdbYwV5zgQJ5)</translation>
     </message>
 </context>
 <context>
@@ -1976,8 +1884,8 @@ This label turns red, if the priority is smaller than &quot;medium&quot;.
     </message>
     <message>
         <location line="+18"/>
-        <source>The address to sign the message with (e.g. B8gZqgY4r2RoEdqYk3QsAqFckyf9pRHN6i)</source>
-        <translation>The address to sign the message with (e.g. B8gZqgY4r2RoEdqYk3QsAqFckyf9pRHN6i)</translation>
+        <source>The address to sign the message with (e.g. 4Zo1ga6xuKuQ7JV7M9rGDoxdbYwV5zgQJ5)</source>
+        <translation>The address to sign the message with (e.g. 4Zo1ga6xuKuQ7JV7M9rGDoxdbYwV5zgQJ5)</translation>
     </message>
     <message>
         <location line="+10"/>
@@ -2013,8 +1921,8 @@ This label turns red, if the priority is smaller than &quot;medium&quot;.
     </message>
     <message>
         <location line="+21"/>
-        <source>Sign the message to prove you own this DynamicCoin address</source>
-        <translation>Sign the message to prove you own this DynamicCoin address</translation>
+        <source>Sign the message to prove you own this CurrentCoin address</source>
+        <translation>Sign the message to prove you own this CurrentCoin address</translation>
     </message>
     <message>
         <location line="+17"/>
@@ -2040,13 +1948,13 @@ This label turns red, if the priority is smaller than &quot;medium&quot;.
     </message>
     <message>
         <location line="+21"/>
-        <source>The address the message was signed with (e.g. B8gZqgY4r2RoEdqYk3QsAqFckyf9pRHN6i)</source>
-        <translation>The address the message was signed with (e.g. B8gZqgY4r2RoEdqYk3QsAqFckyf9pRHN6i)</translation>
+        <source>The address the message was signed with (e.g. 4Zo1ga6xuKuQ7JV7M9rGDoxdbYwV5zgQJ5)</source>
+        <translation>The address the message was signed with (e.g. 4Zo1ga6xuKuQ7JV7M9rGDoxdbYwV5zgQJ5)</translation>
     </message>
     <message>
         <location line="+40"/>
-        <source>Verify the message to ensure it was signed with the specified DynamicCoin address</source>
-        <translation>Verify the message to ensure it was signed with the specified DynamicCoin address</translation>
+        <source>Verify the message to ensure it was signed with the specified CurrentCoin address</source>
+        <translation>Verify the message to ensure it was signed with the specified CurrentCoin address</translation>
     </message>
     <message>
         <location line="+17"/>
@@ -2056,8 +1964,8 @@ This label turns red, if the priority is smaller than &quot;medium&quot;.
     <message>
         <location filename="../signverifymessagedialog.cpp" line="+27"/>
         <location line="+3"/>
-        <source>Enter a DynamicCoin address (e.g. B8gZqgY4r2RoEdqYk3QsAqFckyf9pRHN6i)</source>
-        <translation>Enter a DynamicCoin address (e.g. B8gZqgY4r2RoEdqYk3QsAqFckyf9pRHN6i)</translation>
+        <source>Enter a CurrentCoin address (e.g. 4Zo1ga6xuKuQ7JV7M9rGDoxdbYwV5zgQJ5)</source>
+        <translation>Enter a CurrentCoin address (e.g. 4Zo1ga6xuKuQ7JV7M9rGDoxdbYwV5zgQJ5)</translation>
     </message>
     <message>
         <location line="-2"/>
@@ -2066,8 +1974,8 @@ This label turns red, if the priority is smaller than &quot;medium&quot;.
     </message>
     <message>
         <location line="+3"/>
-        <source>Enter DynamicCoin signature</source>
-        <translation>Enter DynamicCoin signature</translation>
+        <source>Enter CurrentCoin signature</source>
+        <translation>Enter CurrentCoin signature</translation>
     </message>
     <message>
         <location line="+82"/>
@@ -2387,7 +2295,7 @@ This label turns red, if the priority is smaller than &quot;medium&quot;.
         <translation>Confirmed (%1 confirmations)</translation>
     </message>
     <message numerus="yes">
-        <location line="+9"/>
+        <location line="+8"/>
         <source>Mined balance will be available when it matures in %n more block(s)</source>
         <translation>
             <numerusform>Mined balance will be available when it matures in %n more block</numerusform>
@@ -2425,17 +2333,17 @@ This label turns red, if the priority is smaller than &quot;medium&quot;.
         <translation>Payment to yourself</translation>
     </message>
     <message>
-        <location line="+2"/>
+        <location line="+3"/>
         <source>Mined</source>
         <translation>Mined</translation>
     </message>
     <message>
-        <location line="+38"/>
+        <location line="+39"/>
         <source>(n/a)</source>
         <translation>(n/a)</translation>
     </message>
     <message>
-        <location line="+198"/>
+        <location line="+199"/>
         <source>Transaction status. Hover over this field to show number of confirmations.</source>
         <translation>Transaction status. Hover over this field to show number of confirmations.</translation>
     </message>
@@ -2514,6 +2422,7 @@ This label turns red, if the priority is smaller than &quot;medium&quot;.
         <translation>To yourself</translation>
     </message>
     <message>
+        <location line="+1"/>
         <location line="+1"/>
         <source>Mined</source>
         <translation>Mined</translation>
@@ -2640,49 +2549,47 @@ This label turns red, if the priority is smaller than &quot;medium&quot;.
 <context>
     <name>bitcoin-core</name>
     <message>
-        <location filename="../bitcoinstrings.cpp" line="+29"/>
-        <source>DynamicCoin version</source>
-        <translation>DynamicCoin version</translation>
+        <location filename="../bitcoinstrings.cpp" line="+124"/>
+        <source>CurrentCoin version</source>
+        <translation>CurrentCoin version</translation>
     </message>
     <message>
-        <location line="+1"/>
+        <location line="+39"/>
         <source>Usage:</source>
         <translation>Usage:</translation>
     </message>
     <message>
-        <location line="+1"/>
-        <source>Send command to -server or dynamiccoind</source>
-        <translation>Send command to -server or dynamiccoind</translation>
+        <source>Send command to -server or bitcoind</source>
+        <translation type="obsolete">Send command to -server or bitcoind</translation>
     </message>
     <message>
-        <location line="+1"/>
+        <location line="-47"/>
         <source>List commands</source>
         <translation>List commands</translation>
     </message>
     <message>
-        <location line="+1"/>
+        <location line="-12"/>
         <source>Get help for a command</source>
         <translation>Get help for a command</translation>
     </message>
     <message>
-        <location line="+2"/>
+        <location line="+23"/>
         <source>Options:</source>
         <translation>Options:</translation>
     </message>
     <message>
-        <location line="+2"/>
-        <source>Specify configuration file (default: dynamiccoin.conf)</source>
-        <translation>Specify configuration file (default: dynamiccoin.conf)</translation>
+        <location line="+23"/>
+        <source>Specify configuration file (default: CurrentCoin.conf)</source>
+        <translation>Specify configuration file (default: CurrentCoin.conf)</translation>
     </message>
     <message>
-        <location line="+1"/>
-        <source>Specify pid file (default: dynamiccoind.pid)</source>
-        <translation>Specify pid file (default: dynamiccoind.pid)</translation>
+        <location line="+3"/>
+        <source>Specify pid file (default: CurrentCoind.pid)</source>
+        <translation>Specify pid file (default: CurrentCoind.pid)</translation>
     </message>
     <message>
-        <location line="+2"/>
         <source>Specify wallet file (within data directory)</source>
-        <translation>Specify wallet file (within data directory)</translation>
+        <translation type="obsolete">Specify wallet file (within data directory)</translation>
     </message>
     <message>
         <location line="-1"/>
@@ -2690,19 +2597,7 @@ This label turns red, if the priority is smaller than &quot;medium&quot;.
         <translation>Specify data directory</translation>
     </message>
     <message>
-        <location line="-30"/>
-        <source>%s, you must set a rpcpassword in the configuration file:
- %s
-It is recommended you use the following random password:
-rpcuser=dynamiccoinrpc
-rpcpassword=%s
-(you do not need to remember this password)
-If the file does not exist, create it with owner-readable-only file permissions.
-</source>
-        <translation></translation>
-    </message>
-    <message>
-        <location line="+32"/>
+        <location line="-8"/>
         <source>Set database cache size in megabytes (default: 25)</source>
         <translation>Set database cache size in megabytes (default: 25)</translation>
     </message>
@@ -2712,136 +2607,132 @@ If the file does not exist, create it with owner-readable-only file permissions.
         <translation>Set database disk log size in megabytes (default: 100)</translation>
     </message>
     <message>
-        <location line="+6"/>
-        <source>Listen for connections on &lt;port&gt; (default: 15777 or testnet: 25714)</source>
-        <translation>Listen for connections on &lt;port&gt; (default: 15777 or testnet: 25714)</translation>
+        <location line="-28"/>
+        <source>Listen for connections on &lt;port&gt; (default: 7777 or testnet: 17777)</source>
+        <translation>Listen for connections on &lt;port&gt; (default: 8333 or testnet: 18333)</translation>
     </message>
     <message>
-        <location line="+1"/>
+        <location line="+4"/>
         <source>Maintain at most &lt;n&gt; connections to peers (default: 125)</source>
         <translation>Maintain at most &lt;n&gt; connections to peers (default: 125)</translation>
     </message>
     <message>
-        <location line="+3"/>
+        <location line="-32"/>
         <source>Connect to a node to retrieve peer addresses, and disconnect</source>
         <translation>Connect to a node to retrieve peer addresses, and disconnect</translation>
     </message>
     <message>
-        <location line="+1"/>
+        <location line="+65"/>
         <source>Specify your own public address</source>
         <translation>Specify your own public address</translation>
     </message>
     <message>
-        <location line="+5"/>
+        <location line="-74"/>
         <source>Bind to given address. Use [host]:port notation for IPv6</source>
         <translation>Bind to given address. Use [host]:port notation for IPv6</translation>
     </message>
     <message>
-        <location line="+2"/>
-        <source>Stake your coins to support network and gain reward (default: 1)</source>
-        <translation></translation>
-    </message>
-    <message>
-        <location line="+2"/>
+        <location line="+76"/>
         <source>Threshold for disconnecting misbehaving peers (default: 100)</source>
         <translation>Threshold for disconnecting misbehaving peers (default: 100)</translation>
     </message>
     <message>
-        <location line="+1"/>
+        <location line="-108"/>
         <source>Number of seconds to keep misbehaving peers from reconnecting (default: 86400)</source>
         <translation>Number of seconds to keep misbehaving peers from reconnecting (default: 86400)</translation>
     </message>
     <message>
-        <location line="-41"/>
+        <location line="-27"/>
         <source>An error occurred while setting up the RPC port %u for listening on IPv4: %s</source>
-        <translation></translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="+48"/>
+        <location line="+8"/>
         <source>Detach block and address databases. Increases shutdown time (default: 0)</source>
         <translation>Detach block and address databases. Increases shutdown time (default: 0)</translation>
     </message>
     <message>
-        <location line="+107"/>
+        <location line="+5"/>
         <source>Error: The transaction was rejected.  This might happen if some of the coins in your wallet were already spent, such as if you used a copy of wallet.dat and coins were spent in the copy but not marked as spent here.</source>
-        <translation></translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="-5"/>
+        <location line="+4"/>
         <source>Error: This transaction requires a transaction fee of at least %s because of its amount, complexity, or use of recently received funds  </source>
-        <translation></translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="-2"/>
+        <location line="+3"/>
         <source>Error: Wallet unlocked for block minting only, unable to create transaction.</source>
-        <translation></translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="-83"/>
-        <source>Listen for JSON-RPC connections on &lt;port&gt; (default: 15888 or testnet: 25715)</source>
-        <translation></translation>
+        <location line="+5"/>
+        <source>Listen for JSON-RPC connections on &lt;port&gt; (default: 8344 or testnet: 18344)</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="-11"/>
+        <location line="+28"/>
         <source>Accept command line and JSON-RPC commands</source>
         <translation>Accept command line and JSON-RPC commands</translation>
     </message>
     <message>
-        <location line="+99"/>
+        <location line="+23"/>
         <source>Error: Transaction creation failed  </source>
-        <translation></translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="-6"/>
+        <location line="+1"/>
         <source>Error: Wallet locked, unable to create transaction  </source>
-        <translation></translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
+        <location line="+4"/>
         <source>Find peers using DNS lookup (default: 0)</source>
-        <translation type="obsolete">Find peers using DNS lookup (default: 1) {0)?}</translation>
+        <translation type="unfinished">Find peers using DNS lookup (default: 1) {0)?}</translation>
     </message>
     <message>
-        <location line="-8"/>
+        <location line="+5"/>
         <source>Importing blockchain data file.</source>
-        <translation></translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Importing bootstrap blockchain data file.</source>
-        <translation></translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="-85"/>
+        <location line="+26"/>
         <source>Run in the background as a daemon and accept commands</source>
         <translation>Run in the background as a daemon and accept commands</translation>
     </message>
     <message>
-        <location line="+1"/>
+        <location line="+34"/>
         <source>Use the test network</source>
         <translation>Use the test network</translation>
     </message>
     <message>
-        <location line="-21"/>
+        <location line="-93"/>
         <source>Accept connections from outside (default: 1 if no -proxy or -connect)</source>
         <translation>Accept connections from outside (default: 1 if no -proxy or -connect)</translation>
     </message>
     <message>
-        <location line="-38"/>
+        <location line="-52"/>
         <source>An error occurred while setting up the RPC port %u for listening on IPv6, falling back to IPv4: %s</source>
-        <translation></translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="+111"/>
+        <location line="+8"/>
         <source>Error initializing database environment %s! To recover, BACKUP THAT DIRECTORY, then remove everything from it except for wallet.dat.</source>
-        <translation></translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="-20"/>
+        <location line="+20"/>
         <source>Set maximum size of high-priority/low-fee transactions in bytes (default: 27000)</source>
         <translation>Set maximum size of high-priority/low-fee transactions in bytes (default: 27000)</translation>
     </message>
     <message>
-        <location line="+11"/>
+        <location line="+5"/>
         <source>Warning: -paytxfee is set very high! This is the transaction fee you will pay if you send a transaction.</source>
         <translation>Warning: -paytxfee is set very high! This is the transaction fee you will pay if you send a transaction.</translation>
     </message>
@@ -2850,66 +2741,65 @@ If the file does not exist, create it with owner-readable-only file permissions.
         <translation type="obsolete">Warning: Displayed transactions may not be correct! You may need to upgrade, or other nodes may need to upgrade.</translation>
     </message>
     <message>
-        <location line="+62"/>
-        <source>Warning: Please check that your computer&apos;s date and time are correct! If your clock is wrong DynamicCoin will not work properly.</source>
-        <translation>Warning: Please check that your computer&apos;s date and time are correct! If your clock is wrong DynamicCoin will not work properly.</translation>
+        <location line="+3"/>
+        <source>Warning: Please check that your computer&apos;s date and time are correct! If your clock is wrong CurrentCoin will not work properly.</source>
+        <translation>Warning: Please check that your computer&apos;s date and time are correct! If your clock is wrong CurrentCoin will not work properly.</translation>
     </message>
     <message>
-        <location line="-32"/>
+        <location line="+3"/>
         <source>Warning: error reading wallet.dat! All keys read correctly, but transaction data or address book entries might be missing or incorrect.</source>
         <translation>Warning: error reading wallet.dat! All keys read correctly, but transaction data or address book entries might be missing or incorrect.</translation>
     </message>
     <message>
-        <location line="-18"/>
+        <location line="+3"/>
         <source>Warning: wallet.dat corrupt, data salvaged! Original wallet.dat saved as wallet.{timestamp}.bak in %s; if your balance or transactions are incorrect you should restore from a backup.</source>
         <translation>Warning: wallet.dat corrupt, data salvaged! Original wallet.dat saved as wallet.{timestamp}.bak in %s; if your balance or transactions are incorrect you should restore from a backup.</translation>
     </message>
     <message>
-        <location line="-30"/>
+        <location line="+14"/>
         <source>Attempt to recover private keys from a corrupt wallet.dat</source>
         <translation>Attempt to recover private keys from a corrupt wallet.dat</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+2"/>
         <source>Block creation options:</source>
         <translation>Block creation options:</translation>
     </message>
     <message>
-        <location line="-56"/>
+        <location line="+6"/>
         <source>Connect only to the specified node(s)</source>
         <translation>Connect only to the specified node(s)</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Discover own IP address (default: 1 when listening and no -externalip)</source>
         <translation>Discover own IP address (default: 1 when listening and no -externalip)</translation>
     </message>
     <message>
-        <location line="+88"/>
+        <location line="+10"/>
         <source>Failed to listen on any port. Use -listen=0 if you want this.</source>
         <translation>Failed to listen on any port. Use -listen=0 if you want this.</translation>
     </message>
     <message>
-        <location line="-84"/>
         <source>Find peers using DNS lookup (default: 1)</source>
-        <translation>Find peers using DNS lookup (default: 1)</translation>
+        <translation type="obsolete">Find peers using DNS lookup (default: 1)</translation>
     </message>
     <message>
         <source>Sync checkpoints policy (default: strict)</source>
         <translation type="obsolete">Sync checkpoints policy (default: strict)</translation>
     </message>
     <message>
-        <location line="+82"/>
+        <location line="+12"/>
         <source>Invalid -tor address: &apos;%s&apos;</source>
         <translation>Invalid -tor address: &apos;%s&apos;</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+2"/>
         <source>Invalid amount for -reservebalance=&lt;amount&gt;</source>
-        <translation></translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="-79"/>
+        <location line="+8"/>
         <source>Maximum per-connection receive buffer, &lt;n&gt;*1000 bytes (default: 5000)</source>
         <translation>Maximum per-connection receive buffer, &lt;n&gt;*1000 bytes (default: 5000)</translation>
     </message>
@@ -2919,12 +2809,12 @@ If the file does not exist, create it with owner-readable-only file permissions.
         <translation>Maximum per-connection send buffer, &lt;n&gt;*1000 bytes (default: 1000)</translation>
     </message>
     <message>
-        <location line="-13"/>
+        <location line="+3"/>
         <source>Only connect to nodes in network &lt;net&gt; (IPv4, IPv6 or Tor)</source>
         <translation>Only connect to nodes in network &lt;net&gt; (IPv4, IPv6 or Tor)</translation>
     </message>
     <message>
-        <location line="+25"/>
+        <location line="+2"/>
         <source>Output extra debugging information. Implies all other -debug* options</source>
         <translation>Output extra debugging information. Implies all other -debug* options</translation>
     </message>
@@ -2934,22 +2824,27 @@ If the file does not exist, create it with owner-readable-only file permissions.
         <translation>Output extra network debugging information</translation>
     </message>
     <message>
-        <location line="+1"/>
+        <location line="+2"/>
         <source>Prepend debug output with timestamp</source>
         <translation>Prepend debug output with timestamp</translation>
     </message>
     <message>
-        <location line="+32"/>
+        <location line="+4"/>
         <source>SSL options: (see the Bitcoin Wiki for SSL setup instructions)</source>
         <translation>SSL options: (see the Bitcoin Wiki for SSL setup instructions)</translation>
     </message>
     <message>
-        <location line="-68"/>
+        <location line="+1"/>
         <source>Select the version of socks proxy to use (4-5, default: 5)</source>
         <translation>Select the version of socks proxy to use (4-5, default: 5)</translation>
     </message>
     <message>
-        <location line="+38"/>
+        <location line="+1"/>
+        <source>Send command to -server or CurrentCoind</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+2"/>
         <source>Send trace/debug info to console instead of debug.log file</source>
         <translation>Send trace/debug info to console instead of debug.log file</translation>
     </message>
@@ -2959,138 +2854,112 @@ If the file does not exist, create it with owner-readable-only file permissions.
         <translation>Send trace/debug info to debugger</translation>
     </message>
     <message>
-        <location line="+25"/>
+        <location line="+7"/>
         <source>Set maximum block size in bytes (default: 250000)</source>
         <translation>Set maximum block size in bytes (default: 250000)</translation>
     </message>
     <message>
-        <location line="-1"/>
+        <location line="+1"/>
         <source>Set minimum block size in bytes (default: 0)</source>
         <translation>Set minimum block size in bytes (default: 0)</translation>
     </message>
     <message>
-        <location line="-26"/>
+        <location line="+1"/>
         <source>Shrink debug.log file on client startup (default: 1 when no -debug)</source>
         <translation>Shrink debug.log file on client startup (default: 1 when no -debug)</translation>
     </message>
     <message>
-        <location line="-39"/>
+        <location line="+2"/>
         <source>Specify connection timeout in milliseconds (default: 5000)</source>
         <translation>Specify connection timeout in milliseconds (default: 5000)</translation>
     </message>
     <message>
-        <location line="+103"/>
+        <location line="+8"/>
         <source>Unable to sign checkpoint, wrong checkpointkey?
 </source>
-        <translation></translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="-77"/>
+        <location line="+6"/>
         <source>Use UPnP to map the listening port (default: 0)</source>
         <translation>Use UPnP to map the listening port (default: 0)</translation>
     </message>
     <message>
-        <location line="-1"/>
+        <location line="+1"/>
         <source>Use UPnP to map the listening port (default: 1 when listening)</source>
         <translation>Use UPnP to map the listening port (default: 1 when listening)</translation>
     </message>
     <message>
-        <location line="-22"/>
+        <location line="+1"/>
         <source>Use proxy to reach tor hidden services (default: same as -proxy)</source>
         <translation>Use proxy to reach tor hidden services (default: same as -proxy)</translation>
     </message>
     <message>
-        <location line="+39"/>
+        <location line="+2"/>
         <source>Username for JSON-RPC connections</source>
         <translation>Username for JSON-RPC connections</translation>
     </message>
     <message>
-        <location line="+44"/>
-        <source>Verifying database integrity...</source>
-        <translation></translation>
-    </message>
-    <message>
-        <location line="+58"/>
-        <source>WARNING: syncronized checkpoint violation detected, but skipped!</source>
-        <translation></translation>
-    </message>
-    <message>
         <location line="+1"/>
+        <source>Verifying database integrity...</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+2"/>
         <source>Warning: Disk space is low!</source>
         <translation>Warning: Disk space is low!</translation>
     </message>
     <message>
-        <location line="-2"/>
+        <location line="+1"/>
         <source>Warning: This version is obsolete, upgrade required!</source>
         <translation>Warning: This version is obsolete, upgrade required!</translation>
     </message>
     <message>
-        <location line="-49"/>
+        <location line="+1"/>
         <source>wallet.dat corrupt, salvage failed</source>
-        <translation></translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="-51"/>
+        <location line="-44"/>
         <source>Password for JSON-RPC connections</source>
         <translation>Password for JSON-RPC connections</translation>
     </message>
     <message>
-        <location line="-25"/>
-        <source>Sync checkpoints policy (default: permissive)</source>
-        <translation></translation>
-    </message>
-    <message>
-        <location line="+12"/>
-        <source>When creating transactions, ignore inputs with value less than this (default: 0.01)</source>
-        <translation></translation>
-    </message>
-    <message>
-        <location line="+16"/>
+        <location line="-52"/>
         <source>Allow JSON-RPC connections from specified IP address</source>
         <translation>Allow JSON-RPC connections from specified IP address</translation>
     </message>
     <message>
-        <location line="+1"/>
+        <location line="+60"/>
         <source>Send commands to node running on &lt;ip&gt; (default: 127.0.0.1)</source>
         <translation>Send commands to node running on &lt;ip&gt; (default: 127.0.0.1)</translation>
     </message>
     <message>
-        <location line="+1"/>
+        <location line="-95"/>
         <source>Execute command when the best block changes (%s in cmd is replaced by block hash)</source>
         <translation>Execute command when the best block changes (%s in cmd is replaced by block hash)</translation>
     </message>
     <message>
-        <location line="+3"/>
         <source>Execute command when a wallet transaction changes (%s in cmd is replaced by TxID)</source>
-        <translation>Execute command when a wallet transaction changes (%s in cmd is replaced by TxID)</translation>
+        <translation type="obsolete">Execute command when a wallet transaction changes (%s in cmd is replaced by TxID)</translation>
     </message>
     <message>
-        <location line="+3"/>
-        <source>Require a confirmations for change (default: 0)</source>
-        <translation></translation>
-    </message>
-    <message>
-        <location line="+1"/>
-        <source>Enforce transaction scripts to use canonical PUSH operators (default: 1)</source>
-        <translation></translation>
-    </message>
-    <message>
-        <location line="+2"/>
+        <location line="+119"/>
         <source>Upgrade wallet to latest format</source>
         <translation>Upgrade wallet to latest format</translation>
     </message>
     <message>
-        <location line="+1"/>
+        <location line="-16"/>
         <source>Set key pool size to &lt;n&gt; (default: 100)</source>
         <translation>Set key pool size to &lt;n&gt; (default: 100)</translation>
     </message>
     <message>
-        <location line="+1"/>
+        <location line="-14"/>
         <source>Rescan the block chain for missing wallet transactions</source>
         <translation>Rescan the block chain for missing wallet transactions</translation>
     </message>
     <message>
-        <location line="+2"/>
+        <location line="-27"/>
         <source>How many blocks to check at startup (default: 2500, 0 = all)</source>
         <translation>How many blocks to check at startup (default: 2500, 0 = all)</translation>
     </message>
@@ -3100,17 +2969,17 @@ If the file does not exist, create it with owner-readable-only file permissions.
         <translation>How thorough the block verification is (0-6, default: 1)</translation>
     </message>
     <message>
-        <location line="+1"/>
+        <location line="+3"/>
         <source>Imports blocks from external blk000?.dat file</source>
         <translation>Imports blocks from external blk000?.dat file</translation>
     </message>
     <message>
-        <location line="+8"/>
+        <location line="+55"/>
         <source>Use OpenSSL (https) for JSON-RPC connections</source>
         <translation>Use OpenSSL (https) for JSON-RPC connections</translation>
     </message>
     <message>
-        <location line="+1"/>
+        <location line="-22"/>
         <source>Server certificate file (default: server.cert)</source>
         <translation>Server certificate file (default: server.cert)</translation>
     </message>
@@ -3120,57 +2989,51 @@ If the file does not exist, create it with owner-readable-only file permissions.
         <translation>Server private key (default: server.pem)</translation>
     </message>
     <message>
-        <location line="+1"/>
+        <location line="-125"/>
         <source>Acceptable ciphers (default: TLSv1+HIGH:!SSLv2:!aNULL:!eNULL:!AH:!3DES:@STRENGTH)</source>
         <translation>Acceptable ciphers (default: TLSv1+HIGH:!SSLv2:!aNULL:!eNULL:!AH:!3DES:@STRENGTH)</translation>
     </message>
     <message>
-        <location line="+72"/>
-        <source>WARNING: Invalid checkpoint found! Displayed transactions may not be correct! You may need to upgrade, or notify developers.</source>
-        <translation></translation>
-    </message>
-    <message>
-        <location line="-153"/>
+        <location line="+137"/>
         <source>This help message</source>
         <translation>This help message</translation>
     </message>
     <message>
-        <location line="+89"/>
         <source>Wallet %s resides outside data directory %s.</source>
-        <translation>Wallet %s resides outside data directory %s.</translation>
+        <translation type="obsolete">Wallet %s resides outside data directory %s.</translation>
     </message>
     <message>
-        <location line="+1"/>
-        <source>Cannot obtain a lock on data directory %s.  DynamicCoin is probably already running.</source>
-        <translation>Cannot obtain a lock on data directory %s.  DynamicCoin is probably already running.</translation>
+        <location line="-129"/>
+        <source>Cannot obtain a lock on data directory %s.  CurrentCoin is probably already running.</source>
+        <translation>Cannot obtain a lock on data directory %s.  CurrentCoin is probably already running.</translation>
     </message>
     <message>
-        <location line="-92"/>
-        <source>DynamicCoin</source>
-        <translation>DynamicCoin</translation>
+        <location line="+99"/>
+        <source>CurrentCoin</source>
+        <translation>CurrentCoin</translation>
     </message>
     <message>
-        <location line="+134"/>
+        <location line="+33"/>
         <source>Unable to bind to %s on this computer (bind returned error %d, %s)</source>
         <translation>Unable to bind to %s on this computer (bind returned error %d, %s)</translation>
     </message>
     <message>
-        <location line="-124"/>
+        <location line="-70"/>
         <source>Connect through socks proxy</source>
         <translation>Connect through socks proxy</translation>
     </message>
     <message>
-        <location line="+3"/>
+        <location line="-11"/>
         <source>Allow DNS lookups for -addnode, -seednode and -connect</source>
         <translation>Allow DNS lookups for -addnode, -seednode and -connect</translation>
     </message>
     <message>
-        <location line="+116"/>
+        <location line="+41"/>
         <source>Loading addresses...</source>
         <translation>Loading addresses...</translation>
     </message>
     <message>
-        <location line="-15"/>
+        <location line="-26"/>
         <source>Error loading blkindex.dat</source>
         <translation>Error loading blkindex.dat</translation>
     </message>
@@ -3180,27 +3043,27 @@ If the file does not exist, create it with owner-readable-only file permissions.
         <translation>Error loading wallet.dat: Wallet corrupted</translation>
     </message>
     <message>
-        <location line="+4"/>
-        <source>Error loading wallet.dat: Wallet requires newer version of DynamicCoin</source>
-        <translation>Error loading wallet.dat: Wallet requires newer version of DynamicCoin</translation>
+        <location line="+1"/>
+        <source>Error loading wallet.dat: Wallet requires newer version of CurrentCoin</source>
+        <translation>Error loading wallet.dat: Wallet requires newer version of CurrentCoin</translation>
     </message>
     <message>
-        <location line="+1"/>
-        <source>Wallet needed to be rewritten: restart DynamicCoin to complete</source>
-        <translation>Wallet needed to be rewritten: restart DynamicCoin to complete</translation>
+        <location line="+76"/>
+        <source>Wallet needed to be rewritten: restart CurrentCoin to complete</source>
+        <translation>Wallet needed to be rewritten: restart CurrentCoin to complete</translation>
     </message>
     <message>
-        <location line="+1"/>
+        <location line="-78"/>
         <source>Error loading wallet.dat</source>
         <translation>Error loading wallet.dat</translation>
     </message>
     <message>
-        <location line="-16"/>
+        <location line="+18"/>
         <source>Invalid -proxy address: &apos;%s&apos;</source>
         <translation>Invalid -proxy address: &apos;%s&apos;</translation>
     </message>
     <message>
-        <location line="-1"/>
+        <location line="+50"/>
         <source>Unknown network specified in -onlynet: &apos;%s&apos;</source>
         <translation>Unknown network specified in -onlynet: &apos;%s&apos;</translation>
     </message>
@@ -3210,77 +3073,72 @@ If the file does not exist, create it with owner-readable-only file permissions.
         <translation>Unknown -socks proxy version requested: %i</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="-76"/>
         <source>Cannot resolve -bind address: &apos;%s&apos;</source>
         <translation>Cannot resolve -bind address: &apos;%s&apos;</translation>
     </message>
     <message>
-        <location line="+2"/>
+        <location line="+1"/>
         <source>Cannot resolve -externalip address: &apos;%s&apos;</source>
         <translation>Cannot resolve -externalip address: &apos;%s&apos;</translation>
     </message>
     <message>
-        <location line="-24"/>
+        <location line="+28"/>
         <source>Invalid amount for -paytxfee=&lt;amount&gt;: &apos;%s&apos;</source>
         <translation>Invalid amount for -paytxfee=&lt;amount&gt;: &apos;%s&apos;</translation>
     </message>
     <message>
-        <location line="+44"/>
+        <location line="-14"/>
         <source>Error: could not start node</source>
         <translation>Error: could not start node</translation>
     </message>
     <message>
-        <location line="+12"/>
+        <location line="+42"/>
         <source>Sending...</source>
         <translation>Sending...</translation>
     </message>
     <message>
-        <location line="+5"/>
+        <location line="-26"/>
         <source>Invalid amount</source>
         <translation>Invalid amount</translation>
     </message>
     <message>
-        <location line="+1"/>
+        <location line="-5"/>
         <source>Insufficient funds</source>
         <translation>Insufficient funds</translation>
     </message>
     <message>
-        <location line="-35"/>
+        <location line="+9"/>
         <source>Loading block index...</source>
         <translation>Loading block index...</translation>
     </message>
     <message>
-        <location line="-97"/>
+        <location line="-43"/>
         <source>Add a node to connect to and attempt to keep the connection open</source>
         <translation>Add a node to connect to and attempt to keep the connection open</translation>
     </message>
     <message>
-        <location line="+116"/>
-        <source>Unable to bind to %s on this computer. DynamicCoin is probably already running.</source>
-        <translation>Unable to bind to %s on this computer. DynamicCoin is probably already running.</translation>
+        <location line="-22"/>
+        <source>Unable to bind to %s on this computer. CurrentCoin is probably already running.</source>
+        <translation>Unable to bind to %s on this computer. CurrentCoin is probably already running.</translation>
     </message>
     <message>
-        <location line="-110"/>
+        <location line="+49"/>
         <source>Find peers using internet relay chat (default: 1)</source>
         <translation>Find peers using internet relay chat (default: 1)</translation>
     </message>
     <message>
-        <location line="+16"/>
+        <location line="-2"/>
         <source>Fee per KB to add to transactions you send</source>
         <translation>Fee per KB to add to transactions you send</translation>
     </message>
     <message>
-        <location line="+52"/>
-        <source>Invalid amount for -mininput=&lt;amount&gt;: &apos;%s&apos;</source>
-        <translation></translation>
-    </message>
-    <message>
-        <location line="+25"/>
+        <location line="+19"/>
         <source>Loading wallet...</source>
         <translation>Loading wallet...</translation>
     </message>
     <message>
-        <location line="+8"/>
+        <location line="-38"/>
         <source>Cannot downgrade wallet</source>
         <translation>Cannot downgrade wallet</translation>
     </message>
@@ -3290,26 +3148,27 @@ If the file does not exist, create it with owner-readable-only file permissions.
         <translation>Cannot initialize keypool</translation>
     </message>
     <message>
-        <location line="+1"/>
+        <location line="+3"/>
         <source>Cannot write default address</source>
         <translation>Cannot write default address</translation>
     </message>
     <message>
-        <location line="+1"/>
+        <location line="+47"/>
         <source>Rescanning...</source>
         <translation>Rescanning...</translation>
     </message>
     <message>
-        <location line="+5"/>
+        <location line="-42"/>
         <source>Done loading</source>
         <translation>Done loading</translation>
     </message>
     <message>
-        <location line="-157"/>
+        <location line="+66"/>
         <source>To use the %s option</source>
         <translation>To use the %s option</translation>
     </message>
     <message>
+        <location line="-148"/>
         <source>%s, you must set a rpcpassword in the configuration file:
  %s
 It is recommended you use the following random password:
@@ -3318,7 +3177,7 @@ rpcpassword=%s
 (you do not need to remember this password)
 If the file does not exist, create it with owner-readable-only file permissions.
 </source>
-        <translation type="vanished">%s, you must set a rpcpassword in the configuration file:
+        <translation>%s, you must set a rpcpassword in the configuration file:
  %s
 It is recommended you use the following random password:
 rpcuser=bitcoinrpc
@@ -3328,12 +3187,12 @@ If the file does not exist, create it with owner-readable-only file permissions.
 </translation>
     </message>
     <message>
-        <location line="+10"/>
+        <location line="+87"/>
         <source>Error</source>
         <translation>Error</translation>
     </message>
     <message>
-        <location line="+6"/>
+        <location line="-27"/>
         <source>You must set rpcpassword=&lt;password&gt; in the configuration file:
 %s
 If the file does not exist, create it with owner-readable-only file permissions.</source>

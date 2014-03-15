@@ -89,7 +89,7 @@ double GetPoSKernelPS()
         pindex = pindex->pprev;
     }
 
-    return nStakesTime ? dStakeKernelsTriedAvg / nStakesTime : 0;
+    return dStakeKernelsTriedAvg / nStakesTime;
 }
 
 Object blockToJSON(const CBlock& block, const CBlockIndex* blockindex, bool fPrintTransactionDetail)
@@ -138,7 +138,7 @@ Object blockToJSON(const CBlock& block, const CBlockIndex* blockindex, bool fPri
 
     result.push_back(Pair("tx", txinfo));
 
-    if (block.IsProofOfStake())
+    if ( block.IsProofOfStake() || (!fTestNet && block.GetBlockTime() < ENTROPY_SWITCH_TIME) )
         result.push_back(Pair("signature", HexStr(block.vchBlockSig.begin(), block.vchBlockSig.end())));
 
     return result;

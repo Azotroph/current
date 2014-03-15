@@ -1,6 +1,6 @@
 // Copyright (c) 2009-2010 Satoshi Nakamoto
 // Copyright (c) 2009-2012 The Bitcoin developers
-// Copyright (c) 2013 The NovaCoin developers
+// Copyright (c) 2013 The CurrentCoin developers
 // Distributed under the MIT/X11 software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
@@ -14,6 +14,9 @@ using namespace std;
 //
 // BitcoinMiner
 //
+
+string strMintMessage = "Stake miner suspended due to locked wallet.";
+string strMintWarning;
 
 extern unsigned int nMinerSleep;
 
@@ -107,7 +110,7 @@ public:
 };
 
 // CreateNewBlock: create new block (without proof-of-work/proof-of-stake)
-CBlock* CreateNewBlock(CWallet* pwallet, bool fProofOfStake, int64* pFees)
+CBlock* CreateNewBlock(CWallet* pwallet, bool fProofOfStake)
 {
     // Create new block
     auto_ptr<CBlock> pblock(new CBlock());
@@ -275,8 +278,8 @@ CBlock* CreateNewBlock(CWallet* pwallet, bool fProofOfStake, int64* pFees)
             if (tx.nTime > GetAdjustedTime() || (fProofOfStake && tx.nTime > pblock->vtx[0].nTime))
                 continue;
 
-            // Transaction fee
-            int64 nMinFee = tx.GetMinFee(nBlockSize, GMF_BLOCK);
+            // Simplify transaction fee - allow free = false
+            int64 nMinFee = tx.GetMinFee(nBlockSize, false, GMF_BLOCK);
 
             // Skip free transactions if we're past the minimum block size:
             if (fSortedByFee && (dFeePerKb < nMinTxFee) && (nBlockSize + nTxSize >= nBlockMinSize))
@@ -352,10 +355,7 @@ CBlock* CreateNewBlock(CWallet* pwallet, bool fProofOfStake, int64* pFees)
             printf("CreateNewBlock(): total size %"PRI64u"\n", nBlockSize);
 
         if (!fProofOfStake)
-            pblock->vtx[0].vout[0].nValue = GetProofOfWorkReward(pindexPrev->nHeight+1,nFees);
-
-        if (pFees)
-            *pFees = nFees;
+            pblock->vtx[0].vout[0].nValue = GetProofOfWorkReward(pblock->nBits);
 
         // Fill in header
         pblock->hashPrevBlock  = pindexPrev->GetBlockHash();
@@ -516,7 +516,7 @@ void StakeMiner(CWallet *pwallet)
     SetThreadPriority(THREAD_PRIORITY_LOWEST);
 
     // Make this thread recognisable as the mining thread
-    RenameThread("dynamiccoin-miner");
+    RenameThread("CurrentCoin-miner");
 
     // Each thread has its own counter
     unsigned int nExtraNonce = 0;
@@ -528,33 +528,35 @@ void StakeMiner(CWallet *pwallet)
 
         while (pwallet->IsLocked())
         {
+            strMintWarning = strMintMessage;
             Sleep(1000);
             if (fShutdown)
                 return;
         }
 
-        while (vNodes.empty() || IsInitialBlockDownload()
-                || pindexBest->nHeight < MODIFIER_INTERVAL_SWITCH)
+        while (vNodes.empty() || IsInitialBlockDownload())
         {
             Sleep(1000);
             if (fShutdown)
                 return;
         }
+
+        strMintWarning = "";
 
         //
         // Create new block
         //
         CBlockIndex* pindexPrev = pindexBest;
 
-        int64 nFees;
-        auto_ptr<CBlock> pblock(CreateNewBlock(pwallet, true, &nFees));
+        auto_ptr<CBlock> pblock(CreateNewBlock(pwallet, true));
         if (!pblock.get())
             return;
         IncrementExtraNonce(pblock.get(), pindexPrev, nExtraNonce);
 
         // Trying to sign a block
-        if (pblock->SignBlock(*pwallet, nFees))
+        if (pblock->SignBlock(*pwallet))
         {
+            strMintWarning = _("Stake generation: new block found!");
             SetThreadPriority(THREAD_PRIORITY_NORMAL);
             CheckStake(pblock.get(), *pwallet);
             SetThreadPriority(THREAD_PRIORITY_LOWEST);

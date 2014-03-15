@@ -1,8 +1,16 @@
-<<<<<<< HEAD
 
-DynamicCoin official development tree
+CurrentCoin official development tree
 
-DynamicCoin is a PoS-based cryptocurrency.
+CurrentCoin - a hybrid scrypt PoW + PoS based cryptocurrency.
+
+* 10 minutes stake spacing
+* 30 minutes PoW spacing
+* Balanced PoW blocks and stakes weighting
+* The PoW subsidy halves every x64 multiply of PoW difficulty
+* The PoS interest halves every x64 multiply of PoS difficulty
+* Maximum PoW reward is 100 coins
+* Maximum PoS reward is 10 coins
+* ~ 2 billion total coins
 
 Development process
 ===========================
@@ -17,7 +25,7 @@ or are controversial.
 
 The master branch is regularly built and tested, but is not guaranteed
 to be completely stable. Tags are regularly created to indicate new
-official, stable release versions of DynamicCoin.
+official, stable release versions of CurrentCoin.
 
 Feature branches are created when there are major new features being
 worked on by several people.
@@ -31,7 +39,3 @@ in this manner will have their corresponding issue labeled 'stagnant'.
 Issues with no commits will be given a similar warning, and closed after
 15 days from their last activity. Issues closed in this manner will be 
 labeled 'stale'.
-=======
-current
-=======
->>>>>>> 77f3b12fe3e9cafb1cca29594d40913155cdbe8a

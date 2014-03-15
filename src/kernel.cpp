@@ -9,17 +9,20 @@
 
 using namespace std;
 
-extern unsigned int nStakeMaxAge;
-extern unsigned int nTargetSpacing;
+extern int nStakeMaxAge;
+extern int nStakeTargetSpacing;
 
 typedef std::map<int, unsigned int> MapModifierCheckpoints;
 
 // Hard checkpoints of stake modifiers to ensure they are deterministic
 static std::map<int, unsigned int> mapStakeModifierCheckpoints =
     boost::assign::map_list_of
-	
-        ( 0, 0xfd11f4e7u )
-        //( 1600, 0x1b3404a2 )
+        ( 0, 0x0e00670bu )
+        ( 9690, 0x97dcdafau )
+        ( 12661, 0x5d84115du )
+        ( 37092, 0xd230afccu )
+        ( 44200, 0x05370164u )
+        ( 65000, 0xc8e7be6au )
     ;
 
 // Hard checkpoints of stake modifiers to ensure they are deterministic (testNet)
@@ -31,9 +34,11 @@ static std::map<int, unsigned int> mapStakeModifierCheckpointsTestNet =
 // Get time weight
 int64 GetWeight(int64 nIntervalBeginning, int64 nIntervalEnd)
 {
-    // Kernel hash weight starts from 0 at the min age
+    // Kernel hash weight starts from 0 at the 30-day min age
     // this change increases active coins participating the hash and helps
     // to secure the network when proof-of-stake difficulty is low
+    //
+    // Maximum TimeWeight is 90 days.
 
     return min(nIntervalEnd - nIntervalBeginning - nStakeMinAge, (int64)nStakeMaxAge);
 }
@@ -150,7 +155,7 @@ bool ComputeNextStakeModifier(const CBlockIndex* pindexPrev, uint64& nStakeModif
 
     // Sort candidate blocks by timestamp
     vector<pair<int64, uint256> > vSortedByTimestamp;
-    vSortedByTimestamp.reserve(64 * nModifierInterval / nTargetSpacing);
+    vSortedByTimestamp.reserve(64 * nModifierInterval / nStakeTargetSpacing);
     int64 nSelectionInterval = GetStakeModifierSelectionInterval();
     int64 nSelectionIntervalStart = (pindexPrev->GetBlockTime() / nModifierInterval) * nModifierInterval - nSelectionInterval;
     const CBlockIndex* pindex = pindexPrev;
@@ -347,7 +352,7 @@ bool CheckProofOfStake(const CTransaction& tx, unsigned int nBits, uint256& hash
         return tx.DoS(1, error("CheckProofOfStake() : INFO: read txPrev failed"));  // previous transaction not in main chain, may occur during initial download
 
     // Verify signature
-    if (!VerifySignature(txPrev, tx, 0, 0))
+    if (!VerifySignature(txPrev, tx, 0, true, 0))
         return tx.DoS(100, error("CheckProofOfStake() : VerifySignature failed on coinstake %s", tx.GetHash().ToString().c_str()));
 
     // Read block header

@@ -960,7 +960,7 @@ static std::string FormatException(std::exception* pex, const char* pszThread)
     char pszModule[MAX_PATH] = "";
     GetModuleFileNameA(NULL, pszModule, sizeof(pszModule));
 #else
-    const char* pszModule = "dynamiccoin";
+    const char* pszModule = "CurrentCoin";
 #endif
     if (pex)
         return strprintf(
@@ -1009,13 +1009,13 @@ void PrintExceptionContinue(std::exception* pex, const char* pszThread)
 boost::filesystem::path GetDefaultDataDir()
 {
     namespace fs = boost::filesystem;
-    // Windows < Vista: C:\Documents and Settings\Username\Application Data\DynamicCoin
-    // Windows >= Vista: C:\Users\Username\AppData\Roaming\DynamicCoin
-    // Mac: ~/Library/Application Support/DynamicCoin
-    // Unix: ~/.dynamiccoin
+    // Windows < Vista: C:\Documents and Settings\Username\Application Data\CurrentCoin
+    // Windows >= Vista: C:\Users\Username\AppData\Roaming\CurrentCoin
+    // Mac: ~/Library/Application Support/CurrentCoin
+    // Unix: ~/.CurrentCoin
 #ifdef WIN32
     // Windows
-    return GetSpecialFolderPath(CSIDL_APPDATA) / "DynamicCoin";
+    return GetSpecialFolderPath(CSIDL_APPDATA) / "CurrentCoin";
 #else
     fs::path pathRet;
     char* pszHome = getenv("HOME");
@@ -1027,10 +1027,10 @@ boost::filesystem::path GetDefaultDataDir()
     // Mac
     pathRet /= "Library/Application Support";
     fs::create_directory(pathRet);
-    return pathRet / "DynamicCoin";
+    return pathRet / "CurrentCoin";
 #else
     // Unix
-    return pathRet / ".dynamiccoin";
+    return pathRet / ".CurrentCoin";
 #endif
 #endif
 }
@@ -1062,7 +1062,7 @@ const boost::filesystem::path &GetDataDir(bool fNetSpecific)
         path = GetDefaultDataDir();
     }
     if (fNetSpecific && GetBoolArg("-testnet", false))
-        path /= "testnet";
+        path /= "testnet2";
 
     fs::create_directory(path);
 
@@ -1072,7 +1072,7 @@ const boost::filesystem::path &GetDataDir(bool fNetSpecific)
 
 boost::filesystem::path GetConfigFile()
 {
-    boost::filesystem::path pathConfigFile(GetArg("-conf", "dynamiccoin.conf"));
+    boost::filesystem::path pathConfigFile(GetArg("-conf", "CurrentCoin.conf"));
     if (!pathConfigFile.is_complete()) pathConfigFile = GetDataDir(false) / pathConfigFile;
     return pathConfigFile;
 }
@@ -1103,7 +1103,7 @@ void ReadConfigFile(map<string, string>& mapSettingsRet,
 
 boost::filesystem::path GetPidFile()
 {
-    boost::filesystem::path pathPidFile(GetArg("-pid", "dynamiccoind.pid"));
+    boost::filesystem::path pathPidFile(GetArg("-pid", "CurrentCoind.pid"));
     if (!pathPidFile.is_complete()) pathPidFile = GetDataDir() / pathPidFile;
     return pathPidFile;
 }
@@ -1250,10 +1250,10 @@ void AddTimeData(const CNetAddr& ip, int64 nTime)
                 if (!fMatch)
                 {
                     fDone = true;
-                    string strMessage = _("Warning: Please check that your computer's date and time are correct! If your clock is wrong DynamicCoin will not work properly.");
+                    string strMessage = _("Warning: Please check that your computer's date and time are correct! If your clock is wrong CurrentCoin will not work properly.");
                     strMiscWarning = strMessage;
                     printf("*** %s\n", strMessage.c_str());
-                    uiInterface.ThreadSafeMessageBox(strMessage+" ", string("DynamicCoin"), CClientUIInterface::OK | CClientUIInterface::ICON_EXCLAMATION);
+                    uiInterface.ThreadSafeMessageBox(strMessage+" ", string("CurrentCoin"), CClientUIInterface::OK | CClientUIInterface::ICON_EXCLAMATION);
                 }
             }
         }
